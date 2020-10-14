@@ -1,0 +1,9 @@
+{% include 'search_app/navigation.html' %}
+
+<h1>Результаты запроса "{{ query }}"</h1>
+
+<ul>
+    {% for document in result %}
+        <li>{{ document.title }} -- {{ document.snippet }} </li>
+    {% endfor %}
+</ul>
